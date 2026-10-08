@@ -59,7 +59,7 @@ const server = http.createServer(async (req, res) => {
           contents,
           generationConfig: { temperature: 0.7, maxOutputTokens: 1200 }
         }),
-        signal: AbortSignal.timeout(60_000)
+        signal: AbortSignal.timeout(120_000)
       });
       const data = await upstream.json().catch(() => ({}));
       if (!upstream.ok) {
