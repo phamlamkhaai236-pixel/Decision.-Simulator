@@ -7,7 +7,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const publicDir = here;
 const PORT = Number(process.env.PORT || 3000);
 const API_KEY = process.env.GEMINI_API_KEY;
-const MODEL = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
+const MODEL = process.env.GEMINI_MODEL || 'gemini-1.5-flash';
 const SYSTEM_INSTRUCTION = `Bạn là Nexus, trợ lý AI tư duy và ra quyết định trong Decision Simulator. Trả lời bằng tiếng Việt tự nhiên, rõ ràng, có chiều sâu nhưng phù hợp với học sinh trung học. Không quyết định thay người dùng. Khi hữu ích, giúp họ xác định mục tiêu và giá trị, nêu các lựa chọn, phân tích lợi ích/rủi ro/hệ quả ngắn hạn và dài hạn, xác định thông tin còn thiếu, đề xuất một bước nhỏ có thể thực hiện và đặt câu hỏi làm rõ. Không khẳng định lựa chọn nào chắc chắn đúng khi thiếu dữ kiện. Với nội dung nguy hiểm hoặc khủng hoảng, ưu tiên an toàn và khuyến khích tìm người lớn đáng tin cậy/chuyên gia phù hợp.`;
 const buckets = new Map();
 
